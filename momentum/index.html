@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/owfont-regular.css">
+    <link rel="stylesheet" href="style.css" />
+    <title>momentum</title>
+</head>
+
+<body>
+    <time class="time">
+    <div class="time__number"></div>
+    <div class="time__dot">:</div>
+    <div class="time__number"></div>
+    <div class="time__dot">:</div>
+    <div class="time__number"></div>
+  </time>
+
+    <h1>
+        <span class="greeting"></span>
+        <span class="name" spellcheck="false" contenteditable="true"></span>
+    </h1>
+    <h2>
+        <span id='focusQuestion'></span>
+        <span class="focus" contenteditable="true" spellcheck="false"></span>
+    </h2>
+
+    <div class="buttonsScrollBg">
+        <div id="scrollLeft">PREV</div>
+        <div id="scrollRight">NEXT</div>
+    </div>
+    <div class="date"></div>
+
+    <div class="weather">
+        <div class="city" spellcheck="false" contenteditable="true"></div>
+        <i class="weather-icon owf owf-801"></i>
+        <div class="temperature"></div>
+        <div class="windAndHumidity">
+            <div class="wind"><img src='assets/images/icons/wind.svg'>
+                <div></div>
+            </div>
+            <div class="humidity"><img src='assets/images/icons/humidity.png'>
+                <div></div>
+            </div>
+        </div>
+        <div class="weather-description"></div>
+    </div>
+    <div class="languageChanger"></div>
+    <div class="errors">Указанный город не найден</div>
+    <div class="quote" id="quote">
+        <div class="quote__text"></div>
+        <div class="quote__bottom">
+            <div class="nextQuote">next</div>
+            <div class="quote__author"></div>
+        </div>
+    </div>
+    <div class="psevdoQuote" id="psevdoQuote">
+        <div class="quote__text"></div>
+        <div class="quote__author"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

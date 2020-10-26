@@ -1,0 +1,601 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    color: #61ff10;
+    transition: background-image 0.8s linear;
+    -webkit-transition: background-image 0.8s linear;
+    -moz-transition: background-image 0.8s linear;
+    -ms-transition: background-image 0.8s linear;
+    -o-transition: background-image 0.8s linear;
+    min-width: 320px;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.time {
+    font-size: 8rem;
+    background-color: rgb(10 6 6 / 59%);
+    border-radius: 50vh;
+    box-shadow: 0 0 40px 6px rgba(0, 0, 0, 0.6), 0 0 50px 3px rgba(0, 0, 0, 0.25), 0 0 60px 3px rgba(0, 0, 0, 0.2), 0 0 70px 3px rgba(0, 0, 0, 0.25), 0 0 80px 3px rgba(0, 0, 0, 0.2), 0 0 90px 6px rgba(0, 0, 0, 0.2), inset 0 0 10px 6px rgba(0, 0, 0, 0.3), inset 0 0 20px 6px rgba(0, 0, 0, 0.25), inset 0 0 30px 6px rgba(0, 0, 0, 0.2), inset 0 0 40px 6px rgba(0, 0, 0, 0.15), inset 0 0 60px 6px rgba(0, 0, 0, 0.1), inset 0 0 60px 6px rgba(0, 0, 0, 0.05);
+    text-shadow: 0 0 3px #4a9438, 0 0 10px #348e1d, 0 0 15px #7dff5c, 0 0 20px #ffffff78;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 663px;
+    cursor: default;
+    user-select: none;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.time__number {
+    width: 28%;
+    display: block;
+    transition: content 0.5s;
+}
+
+.time__dot {
+    margin: 0 0 21px 0;
+    animation: dots 1s infinite linear;
+    -webkit-animation: dots 1s 0s infinite linear;
+}
+
+@keyframes dots {
+    from {
+        opacity: 0.2;
+    }
+    35% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.2;
+    }
+}
+
+h1 {
+    margin-bottom: 4rem;
+    height: 0px;
+    color: #fff;
+    text-shadow: 10px 0px 9px black, 0px 0px 4px white, 0px 0px 5px white, 10px 0px 15px black, 10px 0px 20px black, -10px 0px 9px black, -10px 0px 15px black, -10px 0px 20px black;
+}
+
+h2 {
+    margin-bottom: 4rem;
+    opacity: 0.8;
+    height: 0px;
+    box-shadow: 0 30px 10vh 6vh #0000009c;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    text-shadow: 0px 0px 2px black, 0px 0px 2px black, 0px 0px 2px black, 0px 0px 9px black, 0px 0px 4px white, 0px 0px 5px white, 10px 0px 15px black, 10px 0px 20px black, -10px 0px 9px black, -10px 0px 15px black, -10px 0px 20px black;
+    word-wrap: break-word;
+    max-width: 520px;
+    text-overflow: ellipsis;
+}
+
+h2 :nth-child(2),
+h1 :nth-child(2) {
+    max-width: 500px;
+    word-break: break-word;
+}
+
+.name {
+    text-transform: capitalize;
+}
+
+.buttonsScrollBg {
+    display: flex;
+    width: 35%;
+    margin: 0 auto;
+    justify-content: space-between;
+    position: absolute;
+    top: 14%;
+    max-width: 300px;
+}
+
+.buttonsScrollBg div {
+    padding: 10px;
+    border-radius: 50vh;
+    background-color: #000000ba;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity 0.5s, box-shadow 0.5s;
+    -webkit-border-radius: 50vh;
+    -moz-border-radius: 50vh;
+    -ms-border-radius: 50vh;
+    -o-border-radius: 50vh;
+    -webkit-transition: opacity 0.5s, box-shadow 0.5s;
+    -moz-transition: opacity 5s, box-shadow 5s;
+    -ms-transition: opacity 5s, box-shadow 5s;
+    -o-transition: opacity 5s, box-shadow 5s;
+    box-shadow: 0 0 6px 3px #ffffff87;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+.buttonsScrollBg div:hover {
+    opacity: 1;
+    box-shadow: 0 0 5px 3px #00000087, 0 0 5px 10px #4ae0404a;
+    transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+.date {
+    box-shadow: 0 0px 15px 4px black, inset 0 -4px 22px 6px black;
+    position: absolute;
+    bottom: 0%;
+    border-top-right-radius: 100vh;
+    border-top-left-radius: 100vh;
+    padding: 2px 30px;
+    height: 25px;
+    text-shadow: 0 0 1px #121910, 0 0 1px #348e1d, 0 0 1px #7dff5c, 0 0 4px #ffffff5c;
+    letter-spacing: 0.8px;
+    word-spacing: 3px;
+}
+
+.weather {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    background-color: #00000036;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 0px 6px 2px #00000085, inset 0 1px 11px 5px #00000080;
+    transition: box-shadow 1s, background-color 1s;
+    -webkit-transition: box-shadow 1s, background-color 1s;
+    -moz-transition: box-shadow 1s, background-color 1s;
+    -ms-transition: box-shadow 1s, background-color 1s;
+    -o-transition: box-shadow 1s, background-color 1s;
+    padding: 0 5px 0 6px;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+    max-width: 122px;
+}
+
+.weather:hover {
+    box-shadow: 0 0px 20px 6px black, inset 0 1px 22px 6px black;
+    background-color: #000000a1;
+    transition: box-shadow 1s, background-color 1s;
+    -webkit-transition: box-shadow 1s, background-color 1s;
+    -moz-transition: box-shadow 1s, background-color 1s;
+    -ms-transition: box-shadow 1s, background-color 1s;
+    -o-transition: box-shadow 1s, background-color 1s;
+}
+
+.city {
+    padding: 10px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    outline: none;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 8px black, -10px 0px 10px black, 10px 0px 10px black;
+}
+
+.temperature {
+    font-size: 29px;
+    margin-bottom: 16px;
+    text-shadow: 0px 0px 3px #54ff00, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+}
+
+.weather-description {
+    margin: 20px auto;
+    font-size: 14px;
+    padding: 8px 0;
+    color: #ffffff;
+    border-radius: 5px;
+    text-shadow: 0 0 1px black, 0 0 1px black, 0 0 2px black, 0 0 3px black;
+    white-space: nowrap;
+}
+
+.weather-icon {
+    font-size: 45px;
+    color: #ffffff;
+    text-shadow: 1px 1.5px 3px #18730a, 2px 3px 3px #3b0aff, 3px 4.5px 3px black;
+    cursor: pointer;
+}
+
+.weather-icon:hover {
+    animation: shake 1.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+}
+
+.languageChanger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-color: #00000036;
+    border-bottom-right-radius: 60%;
+    box-shadow: 0 0px 6px 2px #00000085, inset 0 1px 2px 2px #00000080;
+    transition: box-shadow 1s, background-color 1s;
+    -webkit-transition: box-shadow 1s, background-color 1s;
+    -moz-transition: box-shadow 1s, background-color 1s;
+    -ms-transition: box-shadow 1s, background-color 1s;
+    -o-transition: box-shadow 1s, background-color 1s;
+    padding: 8px 10px 10px 11px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    text-shadow: 0px 0px 3px #54ff00, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+}
+
+.languageChanger:hover {
+    box-shadow: 0 0px 20px 8px black, inset 0 1px 5px 6px black;
+    background-color: #000000a1;
+    transition: box-shadow 1s, background-color 1s;
+    -webkit-transition: box-shadow 1s, background-color 1s;
+    -moz-transition: box-shadow 1s, background-color 1s;
+    -ms-transition: box-shadow 1s, background-color 1s;
+    -o-transition: box-shadow 1s, background-color 1s;
+}
+
+.runingString {
+    position: relative;
+    animation: runStr 6s infinite linear;
+}
+
+@keyframes runStr {
+    0% {
+        left: 150%;
+    }
+    50% {
+        left: -200%
+    }
+    100% {
+        left: -200%
+    }
+}
+
+.errors {
+    position: absolute;
+    top: 50px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    width: auto;
+    box-shadow: 0 0px 6px 2px #000000, inset 0 1px 2px 2px #000000b8;
+    transition: box-shadow 1s, background-color 1s, left 1s cubic-bezier(0.74, 0.76, 1, 1);
+    padding: 10px 13px 10px 21px;
+    background-color: #00000036;
+    color: #e89090;
+    text-shadow: 0px 0px 3px #e40e0e, 0px 0px 3px black, 0px 0px 3px black, 0px 0px 3px black;
+    left: -120%;
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+.wind,
+.humidity {
+    display: flex;
+    margin-bottom: 30px;
+    height: 0px;
+    box-shadow: 0px 11px 32px 14px black;
+    justify-content: start;
+    padding-left: 5px;
+    font-size: 14px;
+}
+
+.wind :first-child,
+.humidity :first-child {
+    height: 20px;
+    margin-right: 3px;
+}
+
+.wind div:last-child,
+.humidity div:last-child {
+    font-size: 14px;
+    box-shadow: inset 0 0 7px 3px black;
+    text-shadow: 0 0 1px white, 0 0 3px #24ef21, 0 0 1px #000;
+    /* white-space: nowrap; */
+}
+
+.quote {
+    position: absolute;
+    right: 20px;
+    bottom: 34px;
+    background-color: #ffffff;
+    color: #000;
+    width: 381px;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 37px;
+    opacity: 0.3;
+    transition: opacity 0.5s, box-shadow 0.5s, right 0.5s, bottom 0.5s;
+    z-index: 5;
+}
+
+.psevdoQuote {
+    display: none;
+}
+
+.quote,
+.quoteChange,
+.quoteHover {
+    position: absolute;
+    background-color: rgb(255 255 200);
+    color: #000;
+    width: 381px;
+    padding: 20px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 37px;
+    transition: opacity 0.5s, box-shadow 0.5s, right 0.5s, bottom 0.5s;
+}
+
+.quoteChange {
+    z-index: 6;
+    right: 20px;
+    bottom: 20px;
+    animation: changeQuote 0.7s linear;
+}
+
+@keyframes changeQuote {
+    0% {
+        right: 28px;
+        bottom: 28px;
+        transform: rotateZ(0deg);
+        box-shadow: 8px 8px 3px 3px rgba(0, 0, 0, 0.589);
+    }
+    25% {
+        right: 22px;
+        bottom: 221px;
+        transform: rotateZ(15deg);
+        box-shadow: 3px 3px 3px 3px #000;
+    }
+    50% {
+        right: 15px;
+        bottom: 125px;
+        transform: rotateZ(7deg);
+        box-shadow: 3px 3px 3px 3px #000;
+    }
+    51% {
+        z-index: 4;
+    }
+    90% {
+        z-index: 4;
+        right: 28px;
+        bottom: 40px;
+        transform: rotateZ(0deg);
+    }
+    100% {
+        z-index: 4;
+        right: 28px;
+        bottom: 40px;
+        transform: rotateZ(0deg) scaleY(0);
+    }
+}
+
+.quoteHover {
+    opacity: 1;
+    box-shadow: 1px 1px 4px 0px #f00, 0px 0px 1px 1px #000, 2px 2px 4px 0px #ff6207, 3px 3px 4px 0px #fff204, 4px 4px 4px 0px #3fff00, 5px 5px 4px 0px #09e2ff, 6px 6px 4px 0px #001fff, 7px 7px 4px 0px #f600ff, 8px 8px 4px 0px #fff, 9px 9px 4px 0px #000;
+    right: 28px;
+    bottom: 42px;
+    transition: opacity 0.5s, box-shadow 0.5s, right 0.5s, bottom 0.5s;
+    z-index: 5;
+}
+
+.quote:hover {
+    opacity: 1;
+    box-shadow: 1px 1px 4px 0px #f00, 0px 0px 1px 1px #000, 2px 2px 4px 0px #ff6207, 3px 3px 4px 0px #fff204, 4px 4px 4px 0px #3fff00, 5px 5px 4px 0px #09e2ff, 6px 6px 4px 0px #001fff, 7px 7px 4px 0px #f600ff, 8px 8px 4px 0px #fff, 9px 9px 4px 0px #000;
+    right: 28px;
+    bottom: 42px;
+}
+
+.quote__text {
+    text-align: justify;
+    text-indent: 10pt;
+    margin-bottom: 10px;
+}
+
+.quote__author {
+    text-align: end;
+}
+
+.quote__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nextQuote {
+    z-index: 7;
+    cursor: pointer;
+    margin-left: 26px;
+    text-transform: uppercase;
+    opacity: 0.5;
+    transition: opacity 0.5s, text-shadow 0.5s;
+    -webkit-border-radius: 50vh;
+    -moz-border-radius: 50vh;
+    -ms-border-radius: 50vh;
+    -o-border-radius: 50vh;
+    box-shadow: 0 0 6px 3px #ffffff87;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+    color: #56ff00;
+    text-shadow: 0 0 2px #000000, 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000, 0 0 1px #7dff5c, 0 0 4px #ffffff;
+}
+
+.nextQuote:hover {
+    text-shadow: 2px 2px 2px #000000, 2px 2px 2px #000000, 2px 2px 1px #7dff5c, 2px 2px 4px #ffffff, 0 0 2px #000000, 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000, 0 0 1px #7dff5c, 0 0 4px #ffffff;
+}
+
+@media (max-width: 700px) {
+    .time {
+        font-size: 6em;
+        width: 95%;
+    }
+    .weather {
+        font-size: 15px;
+    }
+    .city {
+        padding: 8px 0;
+    }
+    .temperature {
+        margin-bottom: 6px;
+    }
+    .weather-description {
+        margin: 10px auto;
+    }
+    .date {
+        font-size: 14px;
+        letter-spacing: 0px;
+    }
+    .quote,
+    .quoteChange,
+    .quoteHover {
+        font-size: 14px;
+        width: 50%;
+        min-width: 295px;
+    }
+}
+
+@media (max-width: 510px) {
+    .time {
+        font-size: 5em;
+        padding: 0 10px;
+    }
+    h2 :nth-child(2),
+    h1 :nth-child(2) {
+        max-width: 520px;
+        max-height: 176px;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 :nth-child(2),
+    h1 :nth-child(2) {
+        max-width: 300px;
+        /* overflow: hidden; */
+        white-space: normal;
+    }
+    .time {
+        font-size: 4em;
+        margin: -10px 0 12px;
+    }
+    .weather-icon{
+        
+font-size: 25px;
+    }
+    .date {
+        width: 100%;
+    }
+    .temperature{
+        
+font-size: 20px;
+    }
+    .wind :first-child, .humidity :first-child{
+        
+height: 13px;
+    }
+    .city{
+        
+padding: 4px 0;
+    }
+    .wind, .humidity {
+        
+margin-bottom: 20px;
+    }
+    .weather-description{
+        padding: 0px 0 8px;
+    }
+    .quote,
+    .quoteChange,
+    .quoteHover {
+        right: 10px;
+        width: 95%;
+        max-width: 290px;
+    }
+    .quoteHover {
+        right: 16px;
+    }
+    .quote:hover {
+        right: 16px;
+    }
+    h1 {
+        margin-bottom: 59px;
+        font-size: 1.3em;
+    }
+    h2 {
+        font-size: 1.4em;
+        max-width: 310px;
+    }
+    .buttonsScrollBg {
+        flex-direction: column;
+        width: auto;
+        top: 7%;
+    }
+    .buttonsScrollBg div {
+        margin-bottom: 20px;
+    }
+    .errors {
+        top: 223px;
+    }
+    @keyframes changeQuote {
+        0% {
+            right: 10px;
+            bottom: 28px;
+            transform: rotateZ(0deg);
+            max-width: 300px;
+        }
+        50% {
+            right: 10px;
+            bottom: 221px;
+            transform: rotateZ(15deg);
+        }
+        51% {
+            z-index: 4;
+        }
+        90% {
+            z-index: 4;
+            right: 10px;
+            bottom: 40px;
+            transform: rotateZ(0deg);
+        }
+        100% {
+            z-index: 4;
+            right: 10px;
+            bottom: 40px;
+            transform: rotateZ(0deg) scaleY(0);
+            max-width: 290px;
+        }
+    }
+}
